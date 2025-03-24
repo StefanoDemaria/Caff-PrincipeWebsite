@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 body{
     margin: 0px;
+
 }
 
 #background-video {
@@ -11,6 +13,7 @@ body{
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    
 }
 
    
@@ -64,20 +67,36 @@ nav li{
 main {
     display: flex;
     flex-direction: column;
-    position: relative;
-    top:50%;
-  
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    transform: translateX(-100%); /* Inizia fuori dalla pagina a sinistra */
+    transition: transform 2s ease-in-out; /* Aggiungi la transizione */
 }
+
+main.loaded {
+    transform: translateX(0); /* Sposta il contenuto nella posizione finale (a destra) */
+}
+
 main h1{
-    font-size: 50px;
+    font-size: 100px;
     font-weight: bold;
-    color: white;
-    font-family: Roboto, Arial, sans-serif;
+    color: rgb(237, 228, 221);
+    font-family: Merriweather ;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    left: 150px;
 }
 
 main h2{
-    font-size: 35px;
+    font-size: 50px;
     font-weight: bold;
-    color: white;
+    color: rgb(237, 228, 221);
     font-family: Roboto;
+    width: 100%;
+    margin-top: 5px;
+    position: relative;
+    left: 350px;
 }
+
