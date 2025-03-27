@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cookie&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Garet';
+    src: url('../font/Garet-Book.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Garet';
+    src: url('../font/Garet-Heavy.otf') format('opentype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    color: white;
+    padding:20px;
+}
+
+#input-module{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ;
+}
+
+#reservationForm{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    justify-content: center;
+    align-items: center;
+    font-family: Garet;
+
+}
+
+label, input{
+    margin:10px;
+  
+
+}
+
+label{
+   font-size: 40px;
+   font-weight: normal;
+   width:fit-content;
+   margin-top: 20px;
+   
+}
+input{
+    height: 35px;
+    font-weight: normal;
+    margin-top: 20px;
+    background-color: transparent;
+    border: solid 1px transparent;
+    color: white;
+    font-size: 30px;
+    width:70%;
+    text-align: center;
+    border-bottom: solid 1px white; !important
+
+    
+   
+}
+
+.submit{
+    height: 80px;
+    width:180px; 
+    border-radius: 50px;
+    justify-self: flex-end;
+    margin-top: 50px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white; 
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.clicked {
+    animation: flash 0.3s ease;
+}
+
+@keyframes flash {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+main{
+    width: 60%;
+    height: fit-content;
+    border: 2px solid white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+h2{
+    padding:10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

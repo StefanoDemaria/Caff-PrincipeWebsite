@@ -94,18 +94,19 @@ main {
 main h1{
     font-size: 100px;
     font-weight: bold;
-    color: rgb(237, 228, 221);
+    color: #F2D9C7;
     font-family: Garet;
     width: 100%;
     margin-bottom: 10px;
     position: relative;
     left: 150px;
+
   
 }
 
 main h2{
     font-size: 40px;
-    color: rgb(237, 228, 221);
+    color: #bd9d8a;
     font-family: Garet;
     width: 100%;
     margin-top: 5px;
@@ -116,10 +117,15 @@ main h2{
 
 br{
     text-indent: 50%;
+   
+}
+
+b{
+    color:#ede4dd
 }
 
 /* Inizialmente gli elementi sono traslati in basso */
-main h1, main h2 {
+main h1, main h2, .button {
     opacity: 0; /* Nasconde il testo */
     transform: translateY(50px);
     transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
@@ -137,7 +143,36 @@ main h2.loaded {
     transition-delay: 0.5s; /* Fa apparire h2 con 1 secondo di ritardo */
 }
 
+.button.loaded{
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.s; /* Fa apparire h2 con 1 secondo di ritardo */
+}
+
 .indent{
     display: block;
     padding-left: 16%;
+    
+}
+
+.button{
+    width: fit-content;
+    height: 70px;
+    border-radius: 40px;
+    position: relative;
+    left:150px; 
+    top:10px;
+    background-color: #bd9d8a;
+    border: solid 2px transparent;
+    font-family: Garet;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    transition: background-color 1s ease-in-out; 
+   
+}
+
+.muoseon{
+    background-color: #bb8c70;
+    
 }
