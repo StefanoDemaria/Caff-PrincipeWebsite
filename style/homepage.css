@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cookie&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Garet';
+    src: url('../font/Garet-Book.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Garet';
+    src: url('../font/Garet-Heavy.otf') format('opentype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+
 body{
     margin: 0px;
 
@@ -13,7 +29,7 @@ body{
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    
+    filter: brightness(0.5)
 }
 
    
@@ -70,33 +86,58 @@ main {
     width: 100%;
     height: 100vh;
     justify-content: center;
-    transform: translateX(-100%); /* Inizia fuori dalla pagina a sinistra */
-    transition: transform 2s ease-in-out; /* Aggiungi la transizione */
+   
 }
 
-main.loaded {
-    transform: translateX(0); /* Sposta il contenuto nella posizione finale (a destra) */
-}
+
 
 main h1{
     font-size: 100px;
     font-weight: bold;
     color: rgb(237, 228, 221);
-    font-family: Merriweather ;
+    font-family: Garet;
     width: 100%;
     margin-bottom: 10px;
     position: relative;
     left: 150px;
+  
 }
 
 main h2{
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 40px;
     color: rgb(237, 228, 221);
-    font-family: Roboto;
+    font-family: Garet;
     width: 100%;
     margin-top: 5px;
     position: relative;
-    left: 350px;
+    left: 230px;
+    font-weight: normal;
 }
 
+br{
+    text-indent: 50%;
+}
+
+/* Inizialmente gli elementi sono traslati in basso */
+main h1, main h2 {
+    opacity: 0; /* Nasconde il testo */
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+/* Quando aggiungiamo la classe .loaded, gli elementi tornano normali */
+main h1.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+main h2.loaded {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s; /* Fa apparire h2 con 1 secondo di ritardo */
+}
+
+.indent{
+    display: block;
+    padding-left: 16%;
+}
