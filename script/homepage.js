@@ -1,33 +1,46 @@
 window.addEventListener('load', function() {
-    // Seleziona gli h1 e h2 dentro <main>
     const h1 = document.querySelector('main h1');
     const h2 = document.querySelector('main h2');
     const button = document.querySelector('.button');
 
-    // Aggiunge la classe .loaded dopo il caricamento della pagina
     setTimeout(() => {
         h1.classList.add('loaded');
-    }, 500); // Appare dopo mezzo secondo
+    }, 500);
 
     setTimeout(() => {
         h2.classList.add('loaded');
-    }, 1500); // Appare dopo 1.5 secondi
+    }, 1500);
 
-    setTimeout(() =>{
+    setTimeout(() => {
         button.classList.add('loaded');
-    }, 2000);
+    }, 2500); // Ora appare DOPO h2
 });
 
-function changeButton(){
-    let button = document.querySelector('.button'); 
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.querySelector('.button'); 
+    if (button) {
+        button.addEventListener('mouseover', () => button.classList.add('mouseon'));
+        button.addEventListener('mouseout', () => button.classList.remove('mouseon')); // Ora torna al colore originale
+    }
+});
 
-    button.addEventListener('mousemove', () =>{
-      button.classList.add('muoseon');
-    });
+let page = 1; 
+let loading = false;
 
-    button.addEventListener('mouseleave', () => {
-       button.classList.remove('mouseon');
-    })
+function loadMoreContent () {
+   if(loading) return; 
+   loading = true;
 
-}
- changeButton(); 
+   document.getElementById('loading').style.display = 'block'; // Mostra il caricamento
+
+   fetch('../pages/page1.html')
+   .then(response => {
+        if(!response.ok) throw new Error ('Errore nella richeista di caricamento della pagina successiva');
+        return response.text();
+   }
+   ).then(data => {
+    let div = document.createElement('div'); 
+    div.classList.add('page'); 
+    
+   })
+}; 

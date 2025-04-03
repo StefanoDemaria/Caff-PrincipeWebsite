@@ -50,8 +50,8 @@ header{
 }
 
 .header-img-container {
-    width: 85px;
-    height: 85px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -146,7 +146,7 @@ main h2.loaded {
 .button.loaded{
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 1.s; /* Fa apparire h2 con 1 secondo di ritardo */
+    transition-delay: 1s; /* Fa apparire h2 con 1 secondo di ritardo */
 }
 
 .indent{
@@ -155,24 +155,24 @@ main h2.loaded {
     
 }
 
-.button{
+.button {
     width: fit-content;
     height: 70px;
     border-radius: 40px;
     position: relative;
-    left:150px; 
-    top:10px;
-    background-color: #bd9d8a;
+    left: 150px; 
+    top: 10px;
+
     border: solid 2px transparent;
     font-family: Garet;
     font-size: 20px;
     padding: 10px;
     color: white;
-    transition: background-color 1s ease-in-out; 
-   
+    background-color: #bd9d8a;
+    transition: background-color 1s ease-in-out, opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
 }
 
-.muoseon{
-    background-color: #bb8c70;
-    
+.mouseon {
+    background-color: #ac785a;
 }
+
